@@ -20,7 +20,7 @@ Page({
         characteristics02: null,
         characteristics03: null,
         characteristics04: null,
-        result,
+        
 
     },
     onLoad: function (opt) {

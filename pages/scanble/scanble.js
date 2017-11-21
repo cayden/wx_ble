@@ -4,32 +4,13 @@
 Page({
   data: {
     logs: [],
-    list:[],
+    loading:false,
+    list:[]
   },
    onLoad: function () {
     console.log('onLoad')
-var that = this;
-// const SDKVersion = wx.getSystemInfoSync().SDKVersion || '1.0.0'
-// const [MAJOR, MINOR, PATCH] = SDKVersion.split('.').map(Number)
-// console.log(SDKVersion);
-// console.log(MAJOR);
-// console.log(MINOR);
-// console.log(PATCH);
+    var that = this;
 
-// const canIUse = apiName => {
-//   if (apiName === 'showModal.cancel') {
-//     return MAJOR >= 1 && MINOR >= 1
-//   }
-//   return true
-// }
-
-// wx.showModal({
-//   success: function(res) {
-//     if (canIUse('showModal.cancel')) {
-//       console.log(res.cancel)
-//     }
-//   }
-// })
       wx.openBluetoothAdapter({
       success: function(res){
         // success
@@ -73,7 +54,8 @@ var that = this;
          console.log("getBluetoothDevices");
          console.log(res);
           that.setData({
-          list:res.devices
+          list:res.devices,
+          loading: true
           });
           console.log(that.data.list);
        },
@@ -99,7 +81,7 @@ var that = this;
     var title =  e.currentTarget.dataset.title;
     var name = e.currentTarget.dataset.name;
      wx.redirectTo({
-       url: '../conn/conn?deviceId='+title+'&name='+name,
+       url: '../service/service?deviceId='+title+'&name='+name,
        success: function(res){
          // success
        },

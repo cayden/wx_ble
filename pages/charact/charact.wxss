@@ -1,0 +1,44 @@
+.ss {
+   background-color: blue;
+   height: 2rpx;
+   width: 100%;
+}
+
+.item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* height: 130rpx; */
+    width: 100%;
+}
+.property{
+  flex-direction: row;
+  justify-content: space-around;
+}
+.flex-wrp{
+    display:flex;
+    background-color: #FFFFFF;
+}
+.flex-button{
+    display:flex;
+    background-color: #FFFFFF;
+}
+.flex-item{
+    width: 100px;
+}
+/*底部按钮*/
+
+.footer{
+  padding-bottom: 16px;
+}
+.footer-btn{
+   display:flex;
+}
+.footer-btn1,.footer-btn2,.footer-btn3,.footer-btn4{
+  font-size: 32rpx;
+  color: #666666;
+  border: 2rpx solid #999999;
+  border-radius: 8rpx;
+  line-height: 44rpx;
+  margin-top: 8px;
+  padding:4px 4px;
+}

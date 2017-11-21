@@ -5,6 +5,6 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="usermotto" bindtap="bindViewTap1">
-    <text class="user-motto">去蓝牙</text>
+    <text class="user-motto">点击进入蓝牙列表</text>
   </view>
 </view>

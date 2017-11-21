@@ -1,4 +1,7 @@
 
+<loading hidden="{{loading}}">
+扫描中...
+</loading>
 <view >设备列表</view>
 <view  wx:for="{{list}}" wx:for-item="item" 
          data-title="{{item.deviceId}}" 

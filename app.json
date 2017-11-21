@@ -3,12 +3,14 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/scanble/scanble",
-    "pages/conn/conn"
+    "pages/conn/conn",
+    "pages/service/service",
+    "pages/charact/charact"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "蓝牙Ble",
     "navigationBarTextStyle":"black"
   }
 }

@@ -1,0 +1,16 @@
+<loading hidden="{{loading}}">
+扫描中...
+</loading>
+<view >服务列表</view>
+<view  wx:for="{{list}}" wx:for-item="item" 
+         data-title="{{item.uuid}}" 
+         data-name="{{item.uuid}}" 
+         wx:key="{{item.uuid}}"
+         bindtap="bindViewTap">
+      <view  class="item">
+            uuid: {{item.uuid}}
+            该服务是否为主服务: {{item.isPrimary}}  
+          <view  class="ss"/>
+      </view>
+       
+</view>

@@ -1,0 +1,28 @@
+<loading hidden="{{loading}}">
+扫描中...
+</loading>
+
+<view  wx:for="{{list}}" wx:for-item="item" 
+         data-title="{{item.uuid}}" 
+         data-name="{{item.uuid}}" 
+         wx:key="{{item.uuid}}"
+         >
+      <view  class="item">
+        <view class="flex-wrp" >
+        uuid: {{item.uuid}}
+        </view>
+        
+        <view class="flex-wrp" style="flex-direction:row;justify-content: space-between;">
+            <view class="flex-item">读:{{item.properties.read}}</view>
+            <view class="flex-item">写:{{item.properties.write}}</view>
+            <view class="flex-item">notify:{{item.properties.notify}}</view>
+            <view class="flex-item">indicate:{{item.properties.indicate}}</view>
+        </view> 
+        <view class="footer-btn" style="display:flex;flex-direction: row;justify-content: space-around;">
+            <button type="primary" data-name='{{item.uuid}}' bindtap="readViewTap"  hidden='{{!item.properties.read}}'>  读取 </button>
+            <button type="primary" bindtap="readViewTap"  hidden='{{!item.properties.write}}'>  写入 </button>
+            <button type="primary" data-name='{{item.uuid}}' bindtap="notifyViewTap"  hidden='{{!item.properties.notify}}'>  notify </button>
+        </view>
+      </view>
+        <view  class="ss"/> 
+</view>
